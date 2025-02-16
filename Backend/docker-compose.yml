@@ -1,0 +1,38 @@
+x-common-variables: &common-variables
+  DEBUG: true
+  DATABASE_URL: postgres://postgres:postgres@db/postgres
+
+services:
+
+  db:
+    image: postgres:alpine
+    ports:
+      - "5406:5432"
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    command:
+      ["postgres", "-c", "log_statement=all", "-c", "log_destination=stderr"]
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+# docker-compose up -d   ->run this code to save the changes, operator like python3 1.py
+  db_1:  
+    image: postgres:alpine
+    ports:
+      - "5407:5432"  #you need to change port number to create another database with port
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    command:
+      ["postgres", "-c", "log_statement=all", "-c", "log_destination=stderr"]
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+
