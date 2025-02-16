@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang = 'ru'>
+
+<head>
+    <meta charse = 'UTF-8'> 
+    <meta name ='viewport' content="width=device-width, initial-scale=1.0">
+    <title>MIT</title>    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Allow stacking of content and footer */
+            min-height: 100vh;
+        }
+        .main {
+            flex: 1; /* Push footer to the bottom */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 800px; /* Adjust as needed */
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .avatar{
+            width: 130px;
+            height: 130px;
+            margin: 10px
+            
+        }
+        .uni_pic, .rank_pic{
+            width: 1000px;
+            height: 600px;
+        }
+        .text, .ranking, .sub_ranking {
+            max-width: 900px;
+            text-align: justify;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .text h2, .ranking h2, .sub_ranking h2 {
+            text-align: center;
+        }
+        .user_info{
+            max-width: 800px;
+            margin: 20px auto;
+            margin-top: 5px;
+            border: 1px solid rgb(78, 74, 74);
+            text-align: justify;
+            padding: 30px;
+            
+        }
+        footer {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+        
+    </style>
+</head>
+
+
+
+
+<body>
+    <div class="main"> 
+       <div class = 'content'>
+            <header><h1>Massachusetts Institute of Technology</h1></header>
+            <img class = 'avatar' src = '1.jpeg' alt = ''>
+        </div> 
+
+        <div class="text">
+            <header><h2>Key Facts About MIT</h2></header>
+            <ul>
+                <li>Founded in 1861</li>
+                <li>Founder is William Barton Rogers</li>
+                <li>Located in Cambridge, MA, USA</li>
+                <li>Approximately 11,000 students</li>
+                <li>World’s №1 university for 2024-25 by QS</li>
+                <li>Specializes in science, engineering, and technology</li>
+            </ul>
+            <img class = 'uni_pic' src = 'mit.jpg' alt = "">
+        </div>
+            
+        
+        <div class = 'ranking'>
+            <header><h2>QS ranks MIT the world’s №1 university for 2024-25.</h2></header>
+            <p>MIT has again been named the world’s top university by the QS World University Rankings, which were announced today.
+            This is the 13th year in a row MIT has received this distinction.MIT was also ranked the world’s top university in 11 of 
+            the subject areas ranked by QS, as announced in April of this year.MIT also placed second in five subject areas: Accounting and Finance; 
+            Architecture/Built Environment; Biological Sciences; Chemistry; and Economics and Econometrics.
+            QS has also released a ranking of specialized master’s programs in business. MIT ranked first for its program in supply chain management 
+            and second for its program in business analytics.</p>   
+            <img class="rank_pic" src = "2.png" alt = "">
+        </div>
+        
+        
+        
+        <div class="sub_ranking">
+            <header><h2>MIT Subject Rankings</h2></header>
+            <ol>
+                <li>Supply Chain Management: 1st</li>
+                <li>Business Analytics: 2nd</li>
+                <li>Accounting and Finance: 2nd</li>
+                <li>Architecture/Built Environment: 2nd</li>
+                <li>Biological Sciences: 2nd</li>
+            </ol>
+        </div>
+        
+        <div class="user_info">
+            <header><h2>Sign up for a consultation!</h2></header>
+            <form action="/submit">
+                <label for="name">Name</label>
+                <input type = 'text' name="name" placeholder="Enter your name">
+                <br><br>
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Enter your email">
+                <br><br>
+                <label for="number">Phone number</label>
+                <input type="tel" name="number">
+                <br><br>
+
+                <botton type="submit">Submit</botton>
+            </form>
+        </div>
+        
+    </div>
+    
+    <footer>
+        <div style="background-color: #f4f4f4; padding: 20px; text-align: center; border-top: 1px solid #ddd;">
+            <p><strong>Contact Information:</strong></p>
+            <p>Email: info@mit.edu</p>
+            <p>Phone: +1 (617) 253-1000</p>
+            <p>Address: 77 Massachusetts Ave, Cambridge, MA 02139, United States</p>
+            <p>&copy; 2024 Massachusetts Institute of Technology</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
+
+
